@@ -1,5 +1,8 @@
 import "./App.css";
+import FormRegisterUser from "./components/FormRegister/FormRegisterUser";
 
-function App() {}
+function App() {
+  return <FormRegisterUser />;
+}
 
 export default App;
