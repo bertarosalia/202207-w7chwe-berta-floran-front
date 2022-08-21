@@ -1,7 +1,8 @@
 export interface ProtoUser {
   userName: string;
   password: string;
-  image?: string;
+  eMail?: string;
+  dateOfBirth?: string;
 }
 
 export interface User {

@@ -7,6 +7,8 @@ const RegisterUserForm = () => {
   const initialUser: ProtoUser = {
     userName: "",
     password: "",
+    eMail: "",
+    dateOfBirth: "",
   };
 
   const [userRegisterData, setUserRegisterData] = useState(initialUser);
@@ -29,14 +31,15 @@ const RegisterUserForm = () => {
     <>
       <FormRegisterUserStyled>
         <div className="register-container">
-          <h1 className="register-title">Register form</h1>
+          <h1 className="register-title">Not registered yet?</h1>
           <form className="register-form" onSubmit={handleSubmit}>
             <div className="form-inputs">
-              <label className="name">Name</label>
               <input
+                id="name"
                 type="text"
-                className="user-name"
-                placeholder="userName"
+                name="userName"
+                className="input"
+                placeholder="Name"
                 required
                 autoComplete="off"
                 value={userRegisterData.userName}
@@ -44,11 +47,11 @@ const RegisterUserForm = () => {
               />
             </div>
             <div className="form-inputs">
-              <label className="password">Password</label>
-
               <input
+                id="password"
+                name="password"
                 type="text"
-                className="password"
+                className="input"
                 placeholder="password"
                 required
                 autoComplete="off"
@@ -56,7 +59,33 @@ const RegisterUserForm = () => {
                 onChange={handleChange}
               />
             </div>
-            <button className="register" type="submit">
+            <div className="form-inputs">
+              <input
+                id="email"
+                name="eMail"
+                type="email"
+                className="input"
+                placeholder="E-mail"
+                required
+                autoComplete="off"
+                value={userRegisterData.eMail}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-inputs">
+              <input
+                id="dateOfBirth"
+                name="dateOfBirth"
+                type="date"
+                className="input"
+                placeholder="Date of birth"
+                required
+                autoComplete="off"
+                value={userRegisterData.dateOfBirth}
+                onChange={handleChange}
+              />
+            </div>
+            <button className="register-button" type="submit">
               Register
             </button>
           </form>
