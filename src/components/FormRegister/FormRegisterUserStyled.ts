@@ -3,10 +3,8 @@ import styled from "styled-components";
 const FormRegisterUserStyled = styled.main`
   margin: auto;
   background-color: #76d7c4;
-  opacity: 50%;
   border-radius: 20px;
   display: flex;
-  width: fit-content;
   align-items: center;
   height: fit-content;
   width: fit-content;
@@ -14,10 +12,12 @@ const FormRegisterUserStyled = styled.main`
 
   .register-title {
     font-size: 30px;
+    color: #030001;
     text-align: center;
   }
 
-  .use-name & .password {
+  .input {
+    padding-top: 10px;
   }
   .form-inputs {
     display: flex;
@@ -32,6 +32,10 @@ const FormRegisterUserStyled = styled.main`
 
   .register-container {
     margin: auto;
+  }
+
+  .register-button {
+    background-color: #23c403;
   }
 `;
 
