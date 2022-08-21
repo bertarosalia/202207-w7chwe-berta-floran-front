@@ -1,6 +1,6 @@
 import { ProtoUser } from "../store/models/User";
 
-export const useRegister = () => {
+const useRegister = () => {
   const postRegister = async (newUser: ProtoUser) => {
     const url = process.env.REACT_APP_API_URL as string;
 
@@ -19,3 +19,4 @@ export const useRegister = () => {
 
   return { postRegister };
 };
+export default useRegister;
